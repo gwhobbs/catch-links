@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+        "spec": "git+https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+          "sshUrl": "git+ssh://git@github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+          "httpsUrl": "git+https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+          "gitUrl": "git://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+          "shortcut": "github:gwhobbs/catch-links#976283a0cfc2e56993cd0407b5bf9210bc717116",
+          "directUrl": "https://raw.githubusercontent.com/gwhobbs/catch-links/976283a0cfc2e56993cd0407b5bf9210bc717116/package.json"
+        }
+      },
+      "/Users/granthobbs/Sites/sprintemployeebenefits.com"
+    ]
+  ],
+  "_from": "git+https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+  "_id": "catch-links@2.0.1",
+  "_inCache": true,
+  "_location": "/catch-links",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+    "spec": "git+https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+      "sshUrl": "git+ssh://git@github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+      "httpsUrl": "git+https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+      "gitUrl": "git://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+      "shortcut": "github:gwhobbs/catch-links#976283a0cfc2e56993cd0407b5bf9210bc717116",
+      "directUrl": "https://raw.githubusercontent.com/gwhobbs/catch-links/976283a0cfc2e56993cd0407b5bf9210bc717116/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+  "_shasum": "10d73a5fd1da15aa37f99833721cf681b3b5cfeb",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/gwhobbs/catch-links.git#976283a0cfc2e56993cd0407b5bf9210bc717116",
+  "_where": "/Users/granthobbs/Sites/sprintemployeebenefits.com",
+  "author": {
+    "name": "substack"
+  },
+  "bugs": {
+    "url": "https://github.com/substack/catch-links/issues"
+  },
+  "dependencies": {},
+  "description": "intercept local link clicks on a page",
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "gitHead": "976283a0cfc2e56993cd0407b5bf9210bc717116",
+  "homepage": "https://github.com/substack/catch-links",
+  "keywords": [
+    "link",
+    "browser",
+    "click",
+    "intercept",
+    "spa",
+    "single-page app"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "catch-links",
+  "optionalDependencies": {},
+  "readme": "# catch-links\n\nintercept local link clicks on a page\n\nThis is useful for doing client-side pushState UIs.\n\n# example\n\nGiven some html:\n\n``` html\n<html>\n  <body>\n    <div>\n      <a href=\"/a\">aaa</a>\n    </div>\n\n    <div>\n      <a href=\"/b\">bbb</a>\n    </div>\n\n    <div>\n      <a href=\"cc\">cc</a>\n    </div>\n    \n    <div>\n      <a href=\"http://npmjs.org\">npmjs</a>\n    </div>\n    \n    <script src=\"bundle.js\"></script>\n  </body>\n</html>\n```\n\nWe'll intercept the relative links `<host>/a` and `<host>/b`, printing them.\nThe external link to npmjs.org will go through as usual.\n\n``` js\nvar catchLinks = require('catch-links');\n\ncatchLinks(window, function (href) {\n    console.log(href);\n});\n```\n\n# methods\n\n``` js\nvar catchLinks = require('catch-links')\n```\n\n## catchLinks(element, cb)\n\nFire `cb(href)` whenever an anchor tag descendant of `element` with an in-server\nurl is clicked.\n\n`href` will always be a relative path rooted at the root path.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```\nnpm install catch-links\n```\n\nUse [browserify](http://browserify.org) to bundle this library into your\nproject.\n\n# license\n\nMIT\n",
+  "readmeFilename": "readme.markdown",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/catch-links.git"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "version": "2.0.1"
+}
